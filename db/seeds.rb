@@ -8,3 +8,13 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "tomato")
+Ingredient.create(name: "pepper")
+Ingredient.create(name: "salt")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "tonic water")
+Ingredient.create(name: "ginger ale")
+Ingredient.create(name: "water")
+Ingredient.create(name: "rum")
+

@@ -1,13 +1,16 @@
-<div>
+<div class= "banner-new" style="background:linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,0.77) 47%, rgba(237,237,237,0.5) 100%), url('http://userscontent2.emaze.com/images/4c962cfc-d761-4450-bfea-050668ba4e9f/19900606-e18b-4161-b799-738dcf2fc2d9.jpg'); background-size: cover;">
+<br>
+  <div class = "container">
   <p id="notice"><%= notice %></p>
-  <div class = "text-center">
-  <h1> Cocktails </h1>
+  <div class = "text-center", style="color: black">
+  <h1> <%= @cocktail.name %> </h1>
   </div>
-  <div style="margin-left: 450px;">
-  <table>
+
+  <br>
+  <div style="margin-left: 200px; color: grey;">
+  <table class="table", style="color: grey">
     <thead>
       <tr>
-        <th style="padding-bottom: 10px;">Name: </th>
         <th style="padding-bottom: 10px;">Dose:</th>
         <th style="padding-bottom: 10px;">Description:</th>
         <th colspan="3"></th>
@@ -15,19 +18,33 @@
     </thead>
 
     <tbody>
-      <tr>
-        <td style="padding-right: 50px;"><%= @cocktail.name %></td>
-          <% @doses.each do |dose| %>
-            <td style="padding-right: 50px;"><%= dose.description %> </td>
-            <td style="padding-right: 50px;"><%= dose.ingredient.name %></td>
-      </tr>
-      <% end %>
+
+          <% @doses.each do |d| %>
+            <tr>
+            <td style="white-space: nowrap; padding-right: 50px;"><%= d.description %> </td>
+            <td style="white-space: nowrap; padding-right: 50px;"><%= d.ingredient.name %></td>
+            <td>   <%= link_to 'delete', dose_path(d), method: :delete %> </td>
+           </tr>
+            <% end %>
     </tbody>
   </table>
 
+  <br>
+  <div style="margin-right: 200px;">
+  <%= simple_form_for [@cocktail, @dose ] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, collection: @ingredients %>
+  <%= f.submit class: "btn btn-medium"  %>
+
+  <% end %>
+</div>
+<br>
+  <div style="margin-right: 200px;">
   <%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
 <%= link_to 'Back', cocktails_path %>
 <%= link_to 'Add Dose', new_cocktail_dose_path(@cocktail) %>
+  </div>
+  </div>
   </div>
 
 

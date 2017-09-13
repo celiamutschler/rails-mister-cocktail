@@ -16,11 +16,7 @@
 }
 
 /* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-}
+
 
 /* Right section */
 .navbar-wagon-right {
@@ -37,11 +33,12 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: grey;
   font-size: 14px;
+  text-decoration: none;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: grey;
   text-decoration: none;
 }
 

@@ -1,0 +1,63 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+
+  display: flex;
+  align-items: top;
+
+  justify-content: center;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.banner h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  font-color: black;
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: black;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.banner:hover {
+   -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+   filter: grayscale(0%);
+ }
+
+ .banner-content {
+  margin-top: 150px;
+}
+
+.banner-content {
+ color: black;
+}
+
+.btn-custom {
+  color: black;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: light;
+}
+
+.banner-new {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+
+  display: flex;
+  align-items: top;
+
+  justify-content: center;
+
+}
+
